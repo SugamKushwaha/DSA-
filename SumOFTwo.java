@@ -1,6 +1,6 @@
 public class SumOFTwo {
 
-    public static int sum(){
+    public static int[] sum(){
          int arr[] = {2,4,3,1,5,};
         int target = 9;
          int i=0; int j=arr.length-1;
@@ -8,7 +8,7 @@ public class SumOFTwo {
             int sum= arr[i]+arr[j];
 
             if(sum ==  target){
-            return i;
+            return new int[];
             }
             if(sum<target){
                 i++;
