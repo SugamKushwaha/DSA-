@@ -1,28 +1,28 @@
 public class ProductMinSubArray {
-    public static void main(String[] args) {
-        int arr[] ={10,5,2,6};
-        int l=0;
-        int h=0;
-        int i=0;
-        int k=100;
-        int p=1;
 
-        while(h<=arr.length || l<=arr.length){
-               p=arr[l]* arr[h];
-               if(p>k){
-                l++;
-                i++;
-                h--;
-               }else if(p<k && h<arr.length){
-                h++;
-                i++;
-               }
-               else{
-                l++;
-                i++;
-               }
+     public int numSubarrayProductLessThanK(int[] nums, int k) {
+        if (k <= 1) return 0;
+        int left = 0;
+        int p = 1;
+        int c = 0;
+        for (int r = 0; r < nums.length; r++) {
+            p *= nums[r];
+            while (p >= k) {
+                p /= nums[left];
+                left++;
+            }
+            c += r - left + 1;
         }
+        return c;
+    }
 
-        System.out.println(i);
+    public static void main(String[] args) {
+        ProductMinSubArray p = new ProductMinSubArray();
+
+        int nums[]={10,5,2,6};
+        int k=100;
+
+       int res= p.numSubarrayProductLessThanK(nums, k);
+       System.out.println(res);
     }
 }
