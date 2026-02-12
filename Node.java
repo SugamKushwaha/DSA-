@@ -16,6 +16,8 @@ public class Node {
         head.next.next.next = new Node(3);// fourth node
         head.next.next.next.next = new Node(3); // fifth node
 
+        
+
         // Print list
         Node temp = head;
         while (temp != null) {
