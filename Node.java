@@ -11,10 +11,10 @@ public class Node {
     public static void main(String[] args) {
         
        Node head = new Node(1);          // first node
-        head.next = new Node(1);          // second node
-        head.next.next = new Node(2);     // third node
-        head.next.next.next = new Node(3);// fourth node
-        head.next.next.next.next = new Node(3); // fifth node
+        head.next = new Node(4);          // second node
+        head.next.next = new Node(3);     // third node
+        head.next.next.next = new Node(0);// fourth node
+        head.next.next.next.next = new Node(2); // fifth node
 
         
 
