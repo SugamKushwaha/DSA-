@@ -1,10 +1,8 @@
-
 import java.util.Stack;
 
 public class Stack2 {
-
     public static void main(String[] args) {
-        String s="]()[]{}";
+        String s="()[]{}";
         boolean f=false;
 
         Stack<Character> st = new Stack<>();
@@ -13,7 +11,6 @@ public class Stack2 {
                  st.push(s.charAt(i));
                  continue;
             }
-            
            if(!st.isEmpty()){
              if(st.peek()=='(' && s.charAt(i)==')'){
                 st.pop();
@@ -28,7 +25,6 @@ public class Stack2 {
                 continue;
             }
            }
-   
             st.push(s.charAt(i));
         }
         if(st.isEmpty()){
@@ -38,5 +34,4 @@ public class Stack2 {
         }
         System.out.println(f);
     }
-    
 }
