@@ -6,7 +6,7 @@ class Solution {
                 count++;
             }
         }
-        int minRecolors = count;
+        int min = count;
         for (int i = k; i < blocks.length(); i++) {
             if (blocks.charAt(i - k) == 'W') {
                 count--;
@@ -14,8 +14,8 @@ class Solution {
             if (blocks.charAt(i) == 'W') {
                 count++;
             }
-            minRecolors = Math.min(minRecolors, count);
+            min = Math.min(min, count);
         }
-        return minRecolors;
+        return min;
     }
 }
